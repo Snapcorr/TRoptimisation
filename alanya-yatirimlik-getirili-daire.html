@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Landing 15 — Şimdi Al, Geleceğe Oyna hakkında detaylı açıklama." name="description"/>
+<meta content="Mahmutlar, satılık daire, Landing 15 — Şimdi Al, Geleceğe Oyna" name="keywords"/>
+<meta content="your-verification-code" name="google-site-verification"/>
+<title>Alanya Yatırımlık Getirili Daire</title>
+</head>
+<body>
+<h1>Alanya Yatırımlık Getirili Daire</h1>
+<p>Bu daire, landing 15 — şimdi al, geleceğe oyna isteyenler için birebir. Her detay düşünülmüş, yaşam ve yatırım için hazır hale getirilmiş. Modern donanım, konforlu iç mekanlar ve erişilebilir konum ile öne çıkar.</p>
+<ul>
+<li>✅ Full eşyalı, taşınmaya hazır</li>
+<li>📍 Sahile, AVM’ye ve toplu taşımaya yakın</li>
+<li>💡 Enerji verimliliği ve doğal ışık</li>
+<li>🔐 Güvenlikli giriş ve izole yapı</li>
+</ul>
+<p>Detaylı bilgi için <a href="https://wa.me/+905518992535" target="_blank">WhatsApp</a> üzerinden bize ulaşabilir ya da <a href="https://t.me/call2owner" target="_blank">Telegram kanalımızı</a> ziyaret edebilirsiniz.</p>
+<p>Ayrıca <a href="https://www.sahibinden.com/ilan/detay/123456789" target="_blank">Sahibinden’deki resmi ilan</a> sayfasına göz atabilirsiniz.</p>
+<script>
+fetch('https://api.exchangerate.host/latest?base=TRY&symbols=USD,EUR')
+  .then(res => res.json())
+  .then(data => {
+    const usd = data.rates.USD.toFixed(2);
+    const eur = data.rates.EUR.toFixed(2);
+    document.getElementById('rates').innerText = `💱 1 TRY = ${usd} USD | ${eur} EUR (güncel)`;
+  })
+  .catch(() => {
+    document.getElementById('rates').innerText = 'Döviz bilgileri yüklenemedi.';
+  });
+</script>
+<script>
+const cities = ['İstanbul', 'Ankara', 'Antalya', 'Alanya', 'İzmir', 'Kemer', 'Side'];
+const city = cities[Math.floor(Math.random() * cities.length)];
+fetch(`https://wttr.in/${city}?format=3`)
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('hava').innerText = `📍 ${data}`;
+  })
+  .catch(() => {
+    document.getElementById('hava').innerText = 'Hava durumu yüklenemedi.';
+  });
+</script>
+<div id="rates">💱 Güncel döviz kurları yükleniyor...</div>
+<script>
+fetch('https://api.exchangerate.host/latest?base=TRY&symbols=USD,EUR')
+  .then(res => res.json())
+  .then(data => {
+    const usd = data.rates.USD.toFixed(2);
+    const eur = data.rates.EUR.toFixed(2);
+    document.getElementById('rates').innerText = `💱 1 TRY = ${usd} USD | ${eur} EUR (güncel)`;
+  })
+  .catch(() => {
+    document.getElementById('rates').innerText = 'Döviz bilgileri yüklenemedi.';
+  });
+</script>
+<div id="hava">🌤️ Türkiye şehirlerinde güncel hava durumu yükleniyor...</div>
+<script>
+const cities = ['İstanbul', 'Ankara', 'Antalya', 'Alanya', 'İzmir', 'Kemer', 'Side'];
+const city = cities[Math.floor(Math.random() * cities.length)];
+fetch(`https://wttr.in/${city}?format=3`)
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('hava').innerText = `📍 ${data}`;
+  })
+  .catch(() => {
+    document.getElementById('hava').innerText = 'Hava durumu yüklenemedi.';
+  });
+</script>
+<div id="random-city">📍 Yükleniyor...</div>
+<script>
+const cities = ['Alanya', 'Kemer', 'Kaş', 'Side', 'Finike', 'Manavgat', 'Gazipaşa', 'Konyaaltı', 'Lara', 'Avsallar', 'Mahmutlar', 'Kargıcak', 'Kestel', 'Oba'];
+const selected = cities[Math.floor(Math.random() * cities.length)];
+document.getElementById("random-city").innerText = "📍 Bugünün Konumu: " + selected;
+</script>
+
+<div id="haberler">🗞️ Turizm haberleri yükleniyor...</div>
+<script>
+fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.turizmguncel.com/rss')
+  .then(response => response.json())
+  .then(data => {
+    let html = "<ul>";
+    data.items.slice(0, 3).forEach(item => {
+      html += `<li><a href="${item.link}" target="_blank">${item.title}</a></li>`;
+    });
+    html += "</ul>";
+    document.getElementById("haberler").innerHTML = html;
+  })
+  .catch(() => {
+    document.getElementById("haberler").innerText = "Haberler şu anda yüklenemiyor.";
+  });
+</script>
+</body>
+</html>
