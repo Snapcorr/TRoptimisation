@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Mahmutlar’da yüksek kazanç potansiyeline sahip 1+1 daire. Turizm amaçlı izinli, kiralamaya hazır, tam donanımlı yatırım fırsatı." name="description"/>
+<meta content="Alanya yatırım fırsatları, Mahmutlar 1+1 daire, turizm izni, uzun dönem kiralama, kazançlı gayrimenkul" name="keywords"/>
+<meta content="your-verification-code" name="google-site-verification">
+<title>Alanya Mahmutlar Eşyalı Satilik</title>
+</meta></head>
+<body>
+<h1>Alanya Mahmutlar Eşyalı Satilik</h1>
+<p>Alanya’nın en hızlı gelişen mahallelerinden biri olan <strong>Mahmutlar</strong>, hem yaşam hem de yatırım için ideal bir bölge haline geldi. Bu <strong>tam donanımlı 1+1 daire</strong>, sadece bugünün değil, geleceğin de kazancını düşündüren bir fırsat.</p>
+<p>Modern donanımı, <strong>kısa ve uzun dönem kiralama</strong> imkânı, oturma izni ve <strong>resmî turizm amaçlı izin belgesi</strong> ile öne çıkıyor. Yatırımcılar için <em>hazır paket</em> gibi düşünebilirsiniz: Eşyasız bir evle uğraşmak yerine, doğrudan gelire odaklanırsınız.</p>
+<h2>Avantajları:</h2>
+<ul>
+<li>📈 <strong>Kira getirisi yüksek</strong> bölgede konumlanmış</li>
+<li>🛠 <strong>Tüm teknik sistemler</strong> (klima, su ısıtıcısı, mutfak seti) yeni</li>
+<li>📄 Tüm belgeler hazır: tapu, turizm izni, proje kaydı</li>
+<li>🏢 Modern binada, güvenlikli girişli ve bakımlı yapı</li>
+</ul>
+<p>Üstelik bu daire, <strong>
+<a href="https://t.me/call2owner" target="_blank">resmî satış kanalımız olan Telegram üzerinden de detaylı olarak incelenebilir</a>
+</strong>.</p>
+<p>Alanya’da kira gelirini maksimuma çıkarmak isteyen yatırımcılar için bu daire, tam bir <em>hazır yatırım fırsatı</em>dır.</p>
+
+<div id="rates">💱 Güncel döviz kurları yükleniyor...</div>
+<script>
+fetch('https://api.exchangerate.host/latest?base=TRY&symbols=USD,EUR')
+  .then(res => res.json())
+  .then(data => {
+    const usd = data.rates.USD.toFixed(2);
+    const eur = data.rates.EUR.toFixed(2);
+    document.getElementById('rates').innerText = `💱 1 TRY = ${usd} USD | ${eur} EUR (güncel)`;
+  })
+  .catch(() => {
+    document.getElementById('rates').innerText = 'Döviz bilgileri yüklenemedi.';
+  });
+</script>
+
+<div id="hava">🌤️ Türkiye şehirlerinde güncel hava durumu yükleniyor...</div>
+<script>
+const cities = ['İstanbul', 'Ankara', 'Antalya', 'Alanya', 'İzmir', 'Kemer', 'Side'];
+const city = cities[Math.floor(Math.random() * cities.length)];
+fetch(`https://wttr.in/${city}?format=3`)
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('hava').innerText = `📍 ${data}`;
+  })
+  .catch(() => {
+    document.getElementById('hava').innerText = 'Hava durumu yüklenemedi.';
+  });
+</script>
+</body>
+</html>

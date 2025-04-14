@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Yeni tadilatlı, sıfır eşyalı 1+1 daire. Mahmutlar’da sadece valizinizi getirmeniz yeterli! Tüm teknik detaylar kurulu ve garantili." name="description"/>
+<meta content="sıfır eşyalı daire, yeni tadilatlı ev, Mahmutlar hazır daire, beyaz eşyalı ev, tam donanımlı konut" name="keywords"/>
+<meta content="your-verification-code" name="google-site-verification">
+<title>Mahmutlar Site Ici Genis Daire</title>
+</meta></head>
+<body>
+<h1>Mahmutlar Site Ici Genis Daire</h1>
+<p>Hayalinizdeki daireye taşınmak için artık <strong>mobilya seçmenize</strong> veya <strong>cihaz taktırmanıza</strong> gerek yok. Bu 1+1 daire, en ince detayına kadar düşünülmüş şekilde teslim ediliyor.</p>
+<p><strong>2025 Mart ayında tamamlanan tadilat</strong> sonrası şu ekipmanlar sıfır olarak kuruldu:</p>
+<ul>
+<li>🌬 <strong>Wi-Fi kontrollü klima</strong> (yeni nesil)</li>
+<li>🛁 <strong>23kW ani su ısıtıcısı</strong> — güçlü ve hızlı</li>
+<li>🧊 <strong>Beyaz eşyalar: buzdolabı, ankastre fırın, ocak, davlumbaz</strong></li>
+<li>🪟 Blackout perdeler ve tavan spot aydınlatmaları</li>
+<li>🛏 Hazır dolaplar, duvar raf sistemleri</li>
+</ul>
+<p>Kurulumlar garantilidir. Elektrik ve su tesisatları yeni nesil normlara göre düzenlenmiş olup, tüm belgeler dosyada mevcuttur.</p>
+<h2>Sadece Valiziniz Yeterli</h2>
+<p>Dairenin <strong>resmî satış platformundaki tüm detaylarını buradan görüntüleyebilirsiniz</strong>:<br/>
+<a href="https://www.sahibinden.com/ilan/detay/123456789" target="_blank">
+Sahibinden.com — resmi ilan sayfası
+</a></p>
+
+<div id="rates">💱 Güncel döviz kurları yükleniyor...</div>
+<script>
+fetch('https://api.exchangerate.host/latest?base=TRY&symbols=USD,EUR')
+  .then(res => res.json())
+  .then(data => {
+    const usd = data.rates.USD.toFixed(2);
+    const eur = data.rates.EUR.toFixed(2);
+    document.getElementById('rates').innerText = `💱 1 TRY = ${usd} USD | ${eur} EUR (güncel)`;
+  })
+  .catch(() => {
+    document.getElementById('rates').innerText = 'Döviz bilgileri yüklenemedi.';
+  });
+</script>
+
+<div id="hava">🌤️ Türkiye şehirlerinde güncel hava durumu yükleniyor...</div>
+<script>
+const cities = ['İstanbul', 'Ankara', 'Antalya', 'Alanya', 'İzmir', 'Kemer', 'Side'];
+const city = cities[Math.floor(Math.random() * cities.length)];
+fetch(`https://wttr.in/${city}?format=3`)
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('hava').innerText = `📍 ${data}`;
+  })
+  .catch(() => {
+    document.getElementById('hava').innerText = 'Hava durumu yüklenemedi.';
+  });
+</script>
+</body>
+</html>
