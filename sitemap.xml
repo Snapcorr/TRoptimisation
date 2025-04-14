@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://troptimisation.vercel.app/</loc>
+    <lastmod>2025-04-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Остальные лендинги -->
+  <url><loc>https://troptimisation.vercel.app/landing02.html</loc></url>
+  <url><loc>https://troptimisation.vercel.app/landing03.html</loc></url>
+  <url><loc>https://troptimisation.vercel.app/landing04.html</loc></url>
+  <url><loc>https://troptimisation.vercel.app/landing05.html</loc></url>
+  <url><loc>https://troptimisation.vercel.app/landing06.html</loc></url>
+  <url><loc>https://troptimisation.vercel.app/landing07.html</loc></url>
+  <url><loc>https://troptimisation.vercel.app/landing08.html</loc></url>
+  <url><loc>https://troptimisation.vercel.app/landing09.html</loc></url>
+  <url><loc>https://troptimisation.vercel.app/landing10.html</loc></url>
+  <url><loc>https://troptimisation.vercel.app/landing11.html</loc></url>
+  <url><loc>https://troptimisation.vercel.app/landing12.html</loc></url>
+  <url><loc>https://troptimisation.vercel.app/landing13.html</loc></url>
+  <url><loc>https://troptimisation.vercel.app/landing14.html</loc></url>
+  <url><loc>https://troptimisation.vercel.app/landing15.html</loc></url>
+
+</urlset>
