@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Mahmutlar’da geniş, ferah, ışık dolu 1+1 daire. Panoramik balkon, yüksek tavan ve modern dokunuşlarla donatılmış konforlu yaşam alanı." name="description"/>
+<meta content="Mahmutlar ferah daire, aydınlık ev, geniş balkon, yüksek tavan, ışık alan konut, 1+1 satılık" name="keywords"/>
+<meta content="your-verification-code" name="google-site-verification">
+<title>Geniş ve Işık Dolu 1+1 Daire - Mahmutlar</title>
+</meta></head>
+<body>
+<h1>Geniş ve Işık Dolu 1+1 Daire - Mahmutlar</h1>
+<p>Sabah güneşiyle uyanmak, gün boyu doğal ışığın tadını çıkarmak ister misiniz? Bu <strong>1+1 daire</strong>, Mahmutlar’ın en çok tercih edilen konumlarından birinde yer alıyor ve <strong>tam anlamıyla ferah bir yaşam sunuyor</strong>.</p>
+<p><strong>Yüksek tavan</strong>, <strong>büyük pencereler</strong> ve <strong>panoramik balkon</strong> ile iç mekanlar genişlik hissi verirken, zemin kaplamasından duvar boyasına kadar her detayda kalite hissediliyor.</p>
+<h2>Öne Çıkan Özellikler</h2>
+<ul>
+<li>🌞 Güneş alan cephe ile doğal aydınlatma</li>
+<li>🏡 2 m² balkon - açık alan keyfi</li>
+<li>🪟 Tam boy camlar ile ferah görünüm</li>
+<li>🎯 Minimalist, fonksiyonel iç tasarım</li>
+<li>🏢 Yeni nesil bina – izolasyonlu ve modern</li>
+</ul>
+<p><strong><a href="https://wa.me/+905518992535" target="_blank">Bu daireyle ilgili doğrudan WhatsApp üzerinden iletişim kurmak için tıklayın</a></strong>.</p>
+<h2>Konum ve Ulaşım</h2>
+<ul>
+<li>🛍 Yekta Trade AVM – 200 metre</li>
+<li>🏖 Plaj – 600 metre</li>
+<li>🚍 Otobüs durağı – 150 metre</li>
+</ul>
+<h2>Neden Bu Daire?</h2>
+<p>Bu daire, sadece oturmak için değil; çalışmak, üretmek ve yaşamak için ideal. Ferah yaşam alanı arayanlar, ev-ofis konsepti düşünenler veya yatırım için eşsiz bir seçenek isteyenler için birebir.</p>
+<p>
+  Tüm detaylara <strong><a href="https://t.me/call2owner" target="_blank">Telegram kanalımızdan</a></strong> ulaşabilir veya
+  <strong><a href="https://www.sahibinden.com/ilan/emlak-konut-satilik-tam-donanim-isikla-sicak-ev-bright-and-fully-equipped-home-1231012522/detay/" target="_blank">resmî Sahibinden ilanını</a></strong> inceleyebilirsiniz.
+</p>
+
+<div id="rates">💱 Kur yükleniyor...</div>
+<script>
+  fetch('https://api.exchangerate.host/latest?base=TRY&symbols=USD,EUR')
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById("rates").innerText =
+        `💱 Güncel Döviz Kurları → EUR: ${data.rates.EUR.toFixed(2)}, USD: ${data.rates.USD.toFixed(2)}`;
+    });
+</script>
+
+<div id="hava">☀️ Hava durumu yükleniyor...</div>
+<script>
+  const cities = ["Alanya", "Mahmutlar", "Kargıcak", "Kestel", "Avsallar", "Oba", "Konaklı"];
+  const c = cities[Math.floor(Math.random() * cities.length)];
+  fetch(`https://wttr.in/${c}?format=%C+%t`)
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("hava").innerText = `📍 ${c}: ${data}`;
+    });
+</script>
+
+<div id="random-city">📍 Yükleniyor...</div>
+<script>
+const cities = ["Alanya", "Mahmutlar", "Kargıcak", "Oba", "Kestel", "Avsallar", "Konaklı"];
+const selected = cities[Math.floor(Math.random() * cities.length)];
+document.getElementById("random-city").innerText = `📍 Bugünün Konumu: ${selected}`;
+</script>
+
+<div id="haberler">🗞️ Haberler yükleniyor...</div>
+<script>
+fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.ntv.com.tr/rss')
+  .then(response => response.json())
+  .then(data => {
+    let html = "<ul>";
+    data.items.slice(0, 3).forEach(item => {
+      html += `<li><a href="${item.link}" target="_blank">${item.title}</a></li>`;
+    });
+    html += "</ul>";
+    document.getElementById("haberler").innerHTML = html;
+  })
+  .catch(() => {
+    document.getElementById("haberler").innerText = "🛑 Haberler yüklenemedi.";
+  });
+</script>
+</body>
+</html>
