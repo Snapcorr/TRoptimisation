@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="google-site-verification" content="uTp4yCkLDim7UJIoasefS3n4URanowmsCllX9QYiwK0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alanya Mahmutlar Satılık 1+1 Daireler – Tam Liste</title>
+</head>
+<body>
+  <h1>🔗 Alanya Mahmutlar'da Yatırıma Uygun Daire Seçenekleri</h1>
+  <ul>
+    <li><a href="alanya-mahmutlar-esyali-satilik.html">Mahmutlar – Eşyalı Satılık 1+1</a></li>
+    <li><a href="alanya-oba-yatirimlik-daire.html">Oba – Yatırıma Uygun Daire</a></li>
+    <li><a href="kargicak-denize-yakin-1plus1.html">Kargıcak – Denize Yakın 1+1</a></li>
+    <li><a href="kestel-kiralik-uygun-daire.html">Kestel – Kiralık Uygun Daire</a></li>
+    <li><a href="mahmutlar-site-ici-genis-daire.html">Mahmutlar – Site İçi Geniş Daire</a></li>
+    <li><a href="mahmutlar-gunesli-1plus1-daire.html">Mahmutlar – Güneşli 1+1 Daire</a></li>
+    <li><a href="alanya-kisa-kiralik-uygun-daire.html">Alanya – Kısa Süreli Kiralık 1+1</a></li>
+    <li><a href="kargicak-sessiz-konumda-daire.html">Kargıcak – Sessiz Konumda Daire</a></li>
+    <li><a href="alanya-turizm-izinli-daire.html">Alanya – Turizm İzinli Yasal Daire</a></li>
+    <li><a href="mahmutlar-aile-uygun-daire.html">Mahmutlar – Aileye Uygun Daire</a></li>
+    <li><a href="mahmutlar-merkezi-konumlu-daire.html">Mahmutlar – Merkezi Konumda 1+1</a></li>
+    <li><a href="alanya-toplu-tasimaya-yakin-daire.html">Alanya – Toplu Taşımaya Yakın Daire</a></li>
+    <li><a href="mahmutlar-sorunsuz-bakimli-daire.html">Mahmutlar – Sorunsuz ve Bakımlı</a></li>
+    <li><a href="alanya-yatirimlik-getirili-daire.html">Alanya – Getirili Yatırım Fırsatı</a></li>
+    <li><a href="alanya-antalya-kiralik-sezonluk-daire.html">Alanya – Sezonluk Kiralık</a></li>
+  </ul>
+
+  <p>📞 <a href="https://wa.me/905518992535" target="_blank">WhatsApp ile iletişim</a> |
+  📢 <a href="https://t.me/call2owner" target="_blank">Telegram kanalımıza katılın</a> |
+  🏠 <a href="https://www.sahibinden.com/ilan/emlak-konut-satilik-tam-donanim-isikla-sicak-ev-bright-and-fully-equipped-home-1231012522/detay/" target="_blank">Sahibinden ilanımızı inceleyin</a></p>
+
+  <div id="rates">💱 Kur yükleniyor...</div>
+  <script>
+    fetch('https://api.exchangerate.host/latest?base=TRY&symbols=USD,EUR')
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("rates").innerText =
+          `💱 Güncel Döviz Kurları → EUR: ${data.rates.EUR.toFixed(2)}, USD: ${data.rates.USD.toFixed(2)}`;
+      }).catch(() => {
+        document.getElementById("rates").innerText = "💱 Kur bilgisi alınamadı.";
+      });
+  </script>
+
+  <div id="hava">☀️ Hava durumu yükleniyor...</div>
+  <script>
+    const cities = ["Mahmutlar", "Kargıcak", "Kestel", "Oba", "Avsallar", "Konaklı"];
+    const city = cities[Math.floor(Math.random() * cities.length)];
+    fetch(`https://wttr.in/${city}?format=%C+%t`)
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("hava").innerText = `📍 ${city}: ${data}`;
+      })
+      .catch(() => {
+        document.getElementById("hava").innerText = "☀️ Hava bilgisi alınamadı.";
+      });
+  </script>
+
+  <div id="haberler">🗞️ Haberler yükleniyor...</div>
+  <script>
+    fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.hurriyet.com.tr/rss/gundem')
+      .then(response => response.json())
+      .then(data => {
+        let html = "<ul>";
+        data.items.slice(0, 3).forEach(item => {
+          html += `<li><a href="${item.link}" target="_blank">${item.title}</a></li>`;
+        });
+        html += "</ul>";
+        document.getElementById("haberler").innerHTML = html;
+      })
+      .catch(() => {
+        document.getElementById("haberler").innerText = "🛑 Haberler yüklenemedi.";
+      });
+  </script>
+
+  <script>
+    const now = new Date();
+    const div = document.createElement('div');
+    div.style.display = 'none';
+    div.textContent = 'Last refresh: ' + now.toISOString();
+    document.body.appendChild(div);
+
+    setTimeout(() => {
+      location.reload(true);
+    }, 86400000);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Ailece yaşamak için ideal: okullara, sağlık merkezine ve toplu taşımaya yakın, huzurlu bir 1+1 daire Mahmutlar’da." name="description"/>
+<meta content="Alanya aile dairesi, Mahmutlar satılık ev, okul yakın daire, çocuklu aileler için konut, güvenli site" name="keywords"/>
+<meta content="your-verification-code" name="google-site-verification">
+<title>Mahmutlar’da Ailece Huzurlu Bir Yaşam</title>
+</meta></head>
+<body>
+<h1>Mahmutlar’da Ailece Huzurlu Bir Yaşam</h1>
+<p>Çocuklu bir aile için en önemli şeylerden biri <strong>uygun konum</strong> ve <strong>sessiz bir çevre</strong>. Bu 1+1 daire, Mahmutlar’ın <strong>aile dostu bölgelerinden</strong> birinde yer alıyor. Sessizliğiyle öne çıkan sokakta konumlanan daire, aynı zamanda hayatı kolaylaştıran tüm hizmetlere de çok yakın:</p>
+<ul>
+<li>🏫 <strong>Sinan Paşa İlkokulu</strong> – sadece 180 metre</li>
+<li>🏥 <strong>Mahmutlar Aile Sağlığı Merkezi</strong> – 150 metre</li>
+<li>🚍 Otobüs durağı – 200 metre</li>
+<li>🏖 Sahil – 600 metre</li>
+</ul>
+<p>Dairenin içi, çocuk güvenliği göz önünde bulundurularak tasarlanmış; priz koruyucular, blackout perdeler ve tam kapalı balkon gibi detaylar mevcut.</p>
+<h2>Neden Bu Daire?</h2>
+<ul>
+<li>👨‍👩‍👧 <strong>Aile için ideal planlama</strong> ve altyapı</li>
+<li>🔒 Güvenli bina ve 7/24 kamera sistemi</li>
+<li>🛒 Marketler, sağlık ve eğitim kurumları bir arada</li>
+<li>🌳 Çocuk oyun alanları ve site içi bahçeler</li>
+</ul>
+<p>Bu ilanı <strong>
+<a href="https://www.sahibinden.com/ilan/emlak-konut-satilik-tam-donanim-isikla-sicak-ev-bright-and-fully-equipped-home-1231012522/detay/" target="_blank">resmî sahibinden sayfamızdan</a>
+</strong> inceleyebilir veya <strong>
+<a href="https://wa.me/+905518992535" target="_blank">WhatsApp üzerinden bizimle doğrudan iletişime geçebilirsiniz</a>
+</strong>.</p>
+
+<div id="rates">💱 Kur yükleniyor...</div>
+<script>
+  fetch('https://api.exchangerate.host/latest?base=TRY&symbols=USD,EUR')
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById("rates").innerText =
+        `💱 Güncel Döviz Kurları → EUR: ${data.rates.EUR.toFixed(2)}, USD: ${data.rates.USD.toFixed(2)}`;
+    });
+</script>
+
+<div id="hava">☀️ Hava durumu yükleniyor...</div>
+<script>
+  const cities = ["Alanya", "Mahmutlar", "Kargıcak", "Kestel", "Avsallar", "Oba", "Konaklı"];
+  const c = cities[Math.floor(Math.random() * cities.length)];
+  fetch(`https://wttr.in/${c}?format=%C+%t`)
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("hava").innerText = `📍 ${c}: ${data}`;
+    });
+</script>
+
+<div id="random-city">📍 Yükleniyor...</div>
+<script>
+const cities = ["Alanya", "Mahmutlar", "Kargıcak", "Oba", "Kestel", "Avsallar", "Konaklı"];
+const selected = cities[Math.floor(Math.random() * cities.length)];
+document.getElementById("random-city").innerText = `📍 Bugünün Konumu: ${selected}`;
+</script>
+
+<div id="haberler">🗞️ Haberler yükleniyor...</div>
+<script>
+fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.ntv.com.tr/rss')
+  .then(response => response.json())
+  .then(data => {
+    let html = "<ul>";
+    data.items.slice(0, 3).forEach(item => {
+      html += `<li><a href="${item.link}" target="_blank">${item.title}</a></li>`;
+    });
+    html += "</ul>";
+    document.getElementById("haberler").innerHTML = html;
+  })
+  .catch(() => {
+    document.getElementById("haberler").innerText = "🛑 Haberler yüklenemedi.";
+  });
+</script>
+</body>
+</html>
